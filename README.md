@@ -1,0 +1,2 @@
+# BallSortingMechatronicsSystem
+My team was given the task of creating a mechanism that is able to sort three types of marble-sized balls based on their material makeup. We developed a mechatronics system that used the weight of the balls as a differentiating factor. This repository is the code that controlled the a DC motor and a servo motor. The Dc motor served as the feeder mechanism. The servo motor served as a dumping mechanism to place the balls in their respective bins.
