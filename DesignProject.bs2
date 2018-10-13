@@ -1,0 +1,51 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+standby PIN 10
+AIN1 PIN 8
+AIN2 PIN 9
+PWMA PIN 4
+
+main:
+
+  counter VAR Word
+
+  FOR counter = 0 TO 200
+    PULSOUT 0,190
+
+    LOW standby
+    LOW AIN1
+    LOW AIN2
+    LOW PWMA
+    'HIGH standby
+    'LOW AIN1
+    'HIGH AIN2
+    'PWM PWMA, 53, 20
+    PAUSE 20
+  NEXT
+
+
+  FOR counter = 0 TO 28
+    HIGH standby
+    LOW AIN1
+    HIGH AIN2
+    PWM PWMA, 53, 255
+  NEXT
+
+LOW standby
+LOW AIN1
+LOW AIN2
+LOW PWMA
+PAUSE 1000
+
+  FOR counter = 0 TO 70
+    PULSOUT 0,540
+
+    'HIGH standby
+    'LOW AIN1
+    'HIGH AIN2
+    'PWM PWMA, 53, 20
+    PAUSE 10
+  NEXT
+
+GOTO main
